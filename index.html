@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="PWA Academic Year Calculation Application" />
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./calculator-512.png" />
+  <link rel="apple-touch-icon" href="./calculator-512.png" />
+  <link rel="manifest" href="./manifest.json" />
+
+  <title>Academic Year Calculator</title>
+
+</head>
+
+<body>
+
+  <div class="main-container">
+    <h1>Academic Year Calculator</h1>
+
+    <label for="dob" class="my-label">Enter your Date of Birth:</label>
+    <input type="date" id="dob">
+    <button onclick="handleSubmit()" class="my-button">Calculate</button>
+
+    <div id="result">
+      <table id="listyears">
+      </table>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(registration => console.log('Service Worker registered'))
+        .catch(error => console.error('Error registering Service Worker:', error));
+    }
+  </script>
+
+</body>
+
+</html>

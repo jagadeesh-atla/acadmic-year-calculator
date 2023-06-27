@@ -1,0 +1,16 @@
+{
+  "name": "Academic Year Calculator PWA",
+  "short_name": "Academic Year",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "calculator-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "offline": true
+}
